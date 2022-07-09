@@ -1,6 +1,7 @@
 # TODO App  
 
 Tools: React/TypeScript/Redux+Toolkit+Persist  
+[Link to the working version of the project](https://rodin-anatoliy.github.io/todo/)
 
 ## Start
 ###  - Setup
