@@ -1,0 +1,17 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - main
+permissions:
+  contents: write
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Install and Build 🔧
+        run: yarn build
+
+      - name: Deploy 🚀
+        run: yarn deploy
