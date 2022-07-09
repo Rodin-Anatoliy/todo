@@ -12,7 +12,6 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          cd ../../
           yarn
           yarn build
 
