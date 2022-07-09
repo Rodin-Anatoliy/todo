@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: Install
-        run: yarn install
+      - name: Install and Build 🔧
+        run: |
+          cd ../../
+          yarn
+          yarn build
 
-      - name: Build
-        run: yarn build
-
-      - name: Deploy
+      - name: Deploy 🚀
         run: yarn deploy
