@@ -12,10 +12,9 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          yarn
+          yarn install
           yarn build
 
       - name: Deploy 🚀
         run: |
-          yarn
           yarn deploy
