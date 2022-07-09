@@ -9,12 +9,21 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+    steps:
+      - name: Check out repo's default branch
+        uses: actions/checkout@v3
 
-      - name: Install and Build 🔧
-        run: |
-          npm install
-          npm run build
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.13.x
+          cache: yarn
 
-      - name: Deploy 🚀
-        run: |
-          npm run deploy
+      - name: Install
+        run: yarn install
+
+      - name: Build
+        run: yarn build
+
+      - name: Deploy
+        run: yarn deploy
