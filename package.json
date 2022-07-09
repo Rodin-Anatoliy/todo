@@ -2,6 +2,7 @@
   "name": "TODO",
   "version": "0.1.1",
   "private": true,
+  "homepage": "./",
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
@@ -19,7 +20,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "predeploy": "react-scripts build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -43,6 +46,7 @@
     "@types/react": "^18.0.6",
     "@types/react-beautiful-dnd": "^13.1.2",
     "@types/react-dom": "^18.0.2",
-    "@types/uuid": "^8.3.4"
+    "@types/uuid": "^8.3.4",
+    "gh-pages": "^4.0.0"
   }
 }

@@ -2,19 +2,20 @@
 
 Tools: React/TypeScript/Redux+Toolkit+Persist  
 
-### Setup
+## Start
+###  - Setup
 
 ```
 yarn install
 ```
 
-### Develop
+### - Develop
 
 ```
 yarn run start
 ```
 
-### Build
+### - Build
 
 ```
 yarn run build
