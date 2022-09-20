@@ -2,7 +2,7 @@ import Typography from '@mui/material/Typography';
 import { useSelector } from 'react-redux';
 import { StoreState } from '../../redux/store';
 import { doneSlice } from '../../redux/slice/done';
-import ColumnLayout from '../ColumnLayout';
+import { Column } from '../Column/Column';
 
 export function DoneColumn() {
   const { done } = useSelector((state: StoreState) => state);
@@ -13,7 +13,7 @@ export function DoneColumn() {
   return (
     <>
       <Typography mb={3}>All done tasks: {done.length}</Typography>
-      <ColumnLayout
+      <Column
         droppableId='done'
         labelText="Type 'done' item"
         completedHandler={completeStatus}

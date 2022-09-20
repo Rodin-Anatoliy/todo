@@ -12,7 +12,7 @@ export interface IModel {
 export type TActionSlice = Omit<IModel, 'text'>;
 export type TUpdateTextShowed = Omit<TActionSlice, 'isFinished'>;
 
-export interface IColumnLayoutProps {
+export interface IColumnProps {
   labelText?: string;
   addHandler: (v: string) => AnyAction;
   removeHandler: (v: string) => AnyAction;
@@ -20,4 +20,17 @@ export interface IColumnLayoutProps {
   selectorState: IModel[];
   droppableId: string;
   updateTextShowed: (v: TUpdateTextShowed) => AnyAction;
+}
+
+export interface ITaskProps {
+  id: string;
+  text: string;
+  isFinished: boolean;
+  createdAt: string;
+  updatedAt: string;
+  isTextShowed: boolean;
+  index: number;
+  updateTextShowed: (v: TUpdateTextShowed) => AnyAction;
+  removeHandler: (v: string) => AnyAction;
+  completedHandler: (v: TActionSlice) => AnyAction;
 }

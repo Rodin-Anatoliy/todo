@@ -2,7 +2,7 @@ import Typography from '@mui/material/Typography';
 import { useSelector } from 'react-redux';
 import { StoreState } from '../../redux/store';
 import { todoSlice } from '../../redux/slice/todo';
-import ColumnLayout from '../ColumnLayout';
+import { Column } from '../Column/Column';
 
 export function ToDoColumn() {
   const { todo } = useSelector((state: StoreState) => state);
@@ -13,7 +13,7 @@ export function ToDoColumn() {
   return (
     <>
       <Typography mb={3}>All todo tasks: {todo.length}</Typography>
-      <ColumnLayout
+      <Column
         droppableId='todo'
         labelText="Type 'to do' item"
         completedHandler={completeStatus}
